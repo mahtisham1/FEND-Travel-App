@@ -11,9 +11,8 @@ This Travel app gives weather data, city picture and Number of Days left for the
 ## Get Up and Running
 1. Install all the necessary plugings and commands
 2. There are two modes set 'development' and 'production
-3. There are three js files in the js folder
+3. There are two js files in the js folder
  - formHandler(to fetch the data + updating UI)
- - tripDuration (to calculate the number of days left)
  - removeTrip (to remove the data)
 4. Enter the command npm start to start the local server
 5. Enter the command npm run build when whole project sets up, after succussfull build a dist folder will be created in the directory
