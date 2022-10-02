@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel App</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Travel Planner</h1>
+            </header>
+            <main>
+                <div class="main-section">
+                    <section>
+                        <form class="">
+                            <div class="trip-location">
+                                <label for="text">My Trip To:</label>
+                                <input id="location" type="location" name="input" value="" placeholder="Enter location" required>
+                            </div>
+                            <div class="departing-date">
+                                <label for="text">Departing:</label>
+                                <input id="date" type="date" value="" name="input" placeholder="MM/DD/YYYY" required>
+                            </div>
+                            <button id="add-trip" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">Save trip</button>
+                            <button id="remove-trip" onclick="return Client.remove()" onsubmit="return remove()">Remove trip</button>
+                        </form>
+                    </section>
+                    <section>
+                        <div class="data-container">
+                            <div id="location-image"></div>
+                            <div class="destination-data">
+                                <div id="location-and-date"></div>
+                                <div id="days-left"></div>
+                                <div id="weather-forcast"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <p>All rights reserved.</p>
+            </footer>
+        </div>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('service-worker.js');
+                });
+            }
+           </script>
+    </body>
+</html>
